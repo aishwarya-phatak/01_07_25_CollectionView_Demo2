@@ -20,7 +20,7 @@
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="kwI-gu-v26">
                                 <rect key="frame" x="20" y="182" width="353" height="582"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="cUw-cx-Fu1">
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="cUw-cx-Fu1">
                                     <size key="itemSize" width="128" height="128"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -56,20 +56,54 @@
             </objects>
             <point key="canvasLocation" x="1215" y="-40"/>
         </scene>
-        <!--View Controller-->
+        <!--Second View Controller-->
         <scene sceneID="cFX-nV-5bj">
             <objects>
-                <viewController id="RzF-13-Zf8" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SecondViewController" id="RzF-13-Zf8" customClass="SecondViewController" customModule="_1_07_25_CollectionView_Demo2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="lV9-JC-3qZ">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T4U-LW-8Wl">
+                                <rect key="frame" x="20" y="158" width="353" height="40"/>
+                                <color key="backgroundColor" systemColor="systemGray4Color"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="qex-aC-BZR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jX5-Bs-cHN">
+                                <rect key="frame" x="20" y="238" width="353" height="40"/>
+                                <color key="backgroundColor" systemColor="systemGray4Color"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="j6T-78-5gq"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="vbm-fh-z8d"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="T4U-LW-8Wl" firstAttribute="leading" secondItem="vbm-fh-z8d" secondAttribute="leading" constant="20" id="GmD-nN-qAO"/>
+                            <constraint firstItem="vbm-fh-z8d" firstAttribute="trailing" secondItem="T4U-LW-8Wl" secondAttribute="trailing" constant="20" id="Rxl-an-H4N"/>
+                            <constraint firstItem="jX5-Bs-cHN" firstAttribute="leading" secondItem="vbm-fh-z8d" secondAttribute="leading" constant="20" id="aNM-0A-4RJ"/>
+                            <constraint firstItem="vbm-fh-z8d" firstAttribute="trailing" secondItem="jX5-Bs-cHN" secondAttribute="trailing" constant="20" id="d2U-TW-yLe"/>
+                            <constraint firstItem="T4U-LW-8Wl" firstAttribute="top" secondItem="vbm-fh-z8d" secondAttribute="top" constant="40" id="h89-2T-fFn"/>
+                            <constraint firstItem="jX5-Bs-cHN" firstAttribute="top" secondItem="T4U-LW-8Wl" secondAttribute="bottom" constant="40" id="w0g-ih-8pE"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="studentCityLabel" destination="jX5-Bs-cHN" id="hky-Ng-PQO"/>
+                        <outlet property="studentNameLabel" destination="T4U-LW-8Wl" id="kaV-7b-oJr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LhO-qD-6Fo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1960" y="-40"/>
+            <point key="canvasLocation" x="1959.5419847328244" y="-40.140845070422536"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="NhY-Tv-CDX">
@@ -91,6 +125,9 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray4Color">
+            <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
